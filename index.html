@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="SCOFIELD">
+<title>THE SCOFIELD — Push-Up Performance Timer</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Barlow+Condensed:ital,wght@1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="fixed z-30 bottom-0 inset-x-0 lg:inset-y-0 lg:right-auto lg:w-56 flex lg:flex-col gap-1 p-2 lg:p-4 bg-[#0d0d0d] border-t lg:border-t-0 lg:border-r border-[#262626]" style="padding-bottom:calc(.5rem + env(safe-area-inset-bottom,0px))">
+  <div class="hidden lg:block mb-6 f text-3xl leading-none">THE<br><span class="red">SCOFIELD</span></div>
+  <a class="nv" href="#train" data-n="train">Entraînement</a>
+  <a class="nv" href="#guinness" data-n="guinness">Mode Guinness</a>
+  <a class="nv" href="#history" data-n="history">Historique</a>
+  <p class="hidden lg:block mt-auto f text-lg leading-tight text-[#bbb]">DISCIPLINE.<br>ENDURANCE.<br><span class="red">PERFORMANCE.</span></p>
+</nav>
+<div class="lg:pl-56 pb-28 lg:pb-6">
+  <header class="grid grid-cols-[1fr_auto_1fr] items-center gap-2 px-3 sm:px-5 py-3">
+    <button class="btn !min-h-[40px] text-xs justify-self-start" data-a="fs">⛶ Plein écran</button>
+    <div class="text-center"><div class="f text-2xl sm:text-4xl leading-none">THE <span class="red">SCOFIELD</span></div><div class="text-[10px] sm:text-xs tracking-[.3em] text-[#ccc] italic font-semibold mt-1">PUSH-UP PERFORMANCE TIMER</div></div>
+    <button id="sb" class="btn !min-h-[40px] text-xs justify-self-end" data-a="snd"></button>
+  </header>
+  <main id="v" class="px-3 sm:px-5 max-w-[1500px] mx-auto"></main>
+  <footer class="px-5 mt-6 text-center lbl grid gap-2 justify-items-center"><button id="ib" hidden class="btn r" data-a="install">Installer l’application</button><span id="sw"></span><span>Prépare-toi. Dépasse-toi. · Données enregistrées sur cet appareil</span></footer>
+</div>
+<div id="md" style="display:none" class="fixed inset-0 z-50 bg-black/80 place-items-center p-3"></div>
+<div id="ts" class="fixed top-3 inset-x-0 mx-auto w-fit z-50 card !py-2 opacity-0 transition-opacity pointer-events-none"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
